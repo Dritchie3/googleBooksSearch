@@ -1,14 +1,15 @@
 .jumbotron {
-    width: 100%;
-    min-height: 300px;
-    padding-top: 100px;
-    margin: 0px;
-    margin-bottom: 5%;
-    display: table;
-    padding: 20px 20px;
-    color: #ffffff;	    
-    /* background-image: url("https://d32dm0rphc51dk.cloudfront.net/kLWolu3G899yrIo1Rhbx1w/larger.jpg"); */
-    /* background-image: url("https://unsplash.com/photos/f2Bi-VBs71M"); */
-    background-size: cover;
-	background-attachment: fixed;
+  width: 100%;
+  min-height: 300px;
+  padding-top: 100px;
+  margin: 0px;
+  margin-bottom: 5%;
+  display: table;
+  padding: 20px 20px;
+  color: #ffffff;
+  /* background-image: url("https://d32dm0rphc51dk.cloudfront.net/kLWolu3G899yrIo1Rhbx1w/larger.jpg"); */
+  /* background-image: url("https://unsplash.com/photos/f2Bi-VBs71M"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: lightseagreen;
 }

@@ -1,5 +1,14 @@
 # Google Books 📚🚀
 
+GitHub URL: https://github.com/Dritchie3/googleBooksSearch
+
+Heroku Deployed App: https://dashboard.heroku.com/apps/google-books-doug
+
+
+
+
+
+
 A react based google book search app for book lovers to search for their favorite books, view them on the google books store, and save them to their library.
 
 ## Search Page 🔍

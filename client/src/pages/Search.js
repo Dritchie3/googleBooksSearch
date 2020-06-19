@@ -28,18 +28,18 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-      API.searchBook(this.state.search)
-        .then(res => this.setState({ books: res.data.items }))
-        .catch(err => console.log(err));
+    API.searchBook(this.state.search)
+      .then(res => this.setState({ books: res.data.items }))
+      .catch(err => console.log(err));
   };
 
   handleSavedBook = data => {
     console.log("This is the book data from handleSavedBook:")
     console.log(data);
     API.saveBook(data)
-    .then(res => alert("Your book was saved! 😄") && this.loadBooks())
-   
-    .catch(err => console.log(err));
+      .then(res => alert("Your book was saved! 😄") && this.loadBooks())
+
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -49,64 +49,67 @@ class Books extends Component {
           {/* <h1>1</h1>
           <br></br>
           <br></br> */}
-          <h1 class="titleHead">Google Books Search</h1>
-          <h5>Search for and Save Books of Interest</h5>
+          <h1 className="titleHead">(React) Google Books Search</h1>
+          <h4>Search for and Save Books of Interest</h4>
         </Jumbotron>
-      <Container fluid>
-      <Row>
-      <Col size="md-6">
-            <div class="searchText">
-            <form >
-                Book Search:
-              <Input
-                value={this.state.search}
-                onChange={this.handleInputChange}
-                name="search"
-                placeholder="Search for a Book"
-              />
-              <FormBtn
-                disabled={!(this.state.search)}
-                onClick={this.handleFormSubmit}
-              >
-                Search Book
-              </FormBtn>
-            </form>
-            </div>
-            </Col>
-            </Row>
-            <Row>
+        <Container fluid>
+          <Row>
             <Col size="md-12">
-              {!this.state.books.length ? (
-                <h1 id="message" className="text-center">No Books To Display</h1> 
-              ) : (
-                <div>
-                  {this.state.books.map(books => {
-                    return(
-                      <BookListItem 
-                        key={books.id}
-                        title={books.volumeInfo.title}
-                        author={books.volumeInfo.authors}
-                        id={books.id}
-                        href={books.volumeInfo.previewLink}
-                        thumbnail={books.volumeInfo.imageLinks.thumbnail}
-                        description={books.volumeInfo.description}
-                        handleSavedBook={() => this.handleSavedBook({
-                          title: books.volumeInfo.title,
-                          author: books.volumeInfo.authors,
-                          id: books.id,
-                          href: books.volumeInfo.previewLink,
-                          thumbnail: books.volumeInfo.imageLinks.thumbnail,
-                          description: books.volumeInfo.description
-                        })}
-                      />    
-                  );              
-                  })}                              
-               </div>
-
-              )}
+              <div className="searchText">
+                <form >
+                  <div className="bookSearch ">
+                    <h4>Book Search:</h4>
+                  </div>
+                  
+                <Input
+                    value={this.state.search}
+                    onChange={this.handleInputChange}
+                    name="search"
+                    placeholder="Search for a Book"
+                  />
+                  <FormBtn
+                    disabled={!(this.state.search)}
+                    onClick={this.handleFormSubmit}
+                  >
+                    Search Book
+                </FormBtn>
+                </form>
+              </div>
             </Col>
           </Row>
-      </Container>
+          <Row>
+            <Col size="md-12">
+              {!this.state.books.length ? (
+                <h3 id="message" className="text-center">No Books To Display</h3>
+              ) : (
+                  <div>
+                    {this.state.books.map(books => {
+                      return (
+                        <BookListItem
+                          key={books.id}
+                          title={books.volumeInfo.title}
+                          author={books.volumeInfo.authors}
+                          id={books.id}
+                          href={books.volumeInfo.previewLink}
+                          thumbnail={books.volumeInfo.imageLinks.thumbnail}
+                          description={books.volumeInfo.description}
+                          handleSavedBook={() => this.handleSavedBook({
+                            title: books.volumeInfo.title,
+                            author: books.volumeInfo.authors,
+                            id: books.id,
+                            href: books.volumeInfo.previewLink,
+                            thumbnail: books.volumeInfo.imageLinks.thumbnail,
+                            description: books.volumeInfo.description
+                          })}
+                        />
+                      );
+                    })}
+                  </div>
+
+                )}
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }

@@ -1,8 +1,13 @@
 .titleHead {
-    padding-top: 70px;
+  padding-top: 80px;
+  
 }
 
 .searchText {
-    text-align: center;
-    
+  text-align: right;
+  border: 10px;
+}
+
+.bookSearch {
+    text-align: left;
 }
