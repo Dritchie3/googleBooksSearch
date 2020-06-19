@@ -4,6 +4,7 @@ import { BookListItem } from "../components/BookList";
 import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
+import "./Search.css";
 
 class Books extends Component {
   state = {
@@ -45,14 +46,17 @@ class Books extends Component {
     return (
       <div>
         <Jumbotron>
-          <h1>Google Books Search</h1>
+          {/* <h1>1</h1>
+          <br></br>
+          <br></br> */}
+          <h1 class="titleHead">Google Books Search</h1>
           <h5>Search for and Save Books of Interest</h5>
         </Jumbotron>
       <Container fluid>
       <Row>
       <Col size="md-6">
-            <div>
-            <form>
+            <div class="searchText">
+            <form >
                 Book Search:
               <Input
                 value={this.state.search}
