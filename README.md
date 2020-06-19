@@ -2,7 +2,7 @@
 
 GitHub URL: https://github.com/Dritchie3/googleBooksSearch
 
-Heroku Deployed App: https://dashboard.heroku.com/apps/google-books-doug
+Heroku Deployed App: https://google-books-doug.herokuapp.com/
 
 
 
