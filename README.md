@@ -1,5 +1,6 @@
 # Google Books 📚🚀
 
+
 GitHub URL: https://github.com/Dritchie3/googleBooksSearch
 
 Heroku Deployed App: https://google-books-doug.herokuapp.com/
@@ -21,7 +22,7 @@ A react based google book search app for book lovers to search for their favorit
 
 ## Demo
 
-Google Books is hosted on Heroku. Check it out live by [clicking here]().
+Google Books is hosted on Heroku. Check it out live.
 
 ## How It Works
 
