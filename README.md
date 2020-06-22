@@ -12,17 +12,10 @@ Heroku Deployed App: https://google-books-doug.herokuapp.com/
 
 A react based google book search app for book lovers to search for their favorite books, view them on the google books store, and save them to their library.
 
-## Search Page 🔍
-
-![searchgif](/images/SearchPage.gif)
-
-## Saved Page 💾
-
-![savedgif](/images/SavedPage.gif)
 
 ## Demo
 
-Google Books is hosted on Heroku. Check it out live.
+Google Books is hosted on Heroku. Check it out live at https://google-books-doug.herokuapp.com/.
 
 ## How It Works
 
